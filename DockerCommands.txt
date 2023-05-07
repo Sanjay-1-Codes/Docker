@@ -1,0 +1,4 @@
+docker build . - creates docker image and provides id of the image
+docker run -p <port>:<port> <imageId> - runs the container based on image
+docker ps - lists the name of all running containers
+docker stop <containerName> - stop the container
