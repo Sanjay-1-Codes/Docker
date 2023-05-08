@@ -11,10 +11,20 @@ docker stop <containerName>                               - stop the container
 Section 2
 ---------
 
-docker run node                   - to directly run an image with name from dockerhub - this downloads the image automatically and runs 
-                                    as a container - this exits after starting since the container runs in isolation and there is no 
-                                    interactive session exposed to the user
-docker run -it node               - now this starts the another container and provides a node shell where we can execute js code                  
-docker pull node                  - to download a file from the remote repository
-docker start <containerName>      - to restart a stopped container
+docker run node                                              - to directly run an image with name from dockerhub - this downloads the image automatically and runs 
+                                                               as a container - this exits after starting since the container runs in isolation and there is no 
+                                                               interactive session exposed to the user
+docker run -it node                                          - now this starts the another container and provides a node shell where we can execute js code                  
+docker pull node                                             - to download a file from the remote repository
+docker start <containerName>                                 - to restart a stopped container
+docker start -a <containerName>                              - to restart a stopped container in attahced mode
+docker run -p <localhost-port>:<container-port> -d <imageId> - creates a new container and runs the container based on image in detached mode
+docker attach <containerName>                                - to attach with a detached container
+docker logs <containerName>                                  - to see all the past logs of the container
+docker logs -f <containerName>                               - to see all the past/active logs of the container
+
+With docker run we are only attached to the output of the container, we cant input (like Scanner) anything unless we are in interactive 
+mode with the terminal provided by the container for that we run images with -i (interactive) -t (pseudo TTY)
+
+docker run -it <containerName>                               - now this starts the another container and provides a shell where we can input
 

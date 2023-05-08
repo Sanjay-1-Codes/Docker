@@ -30,6 +30,11 @@ docker run vs docker start
   until the running instance of the container is stopped
 * With docker start, once we execute the command the terminal is not freezed it allows us to run other commands, but also 
   the container is restarted and running
-* What's the difference bw these two?    
+* What's the difference bw these two?
+* This is because of the attached and detached mode of docker run and docker start respectively
+* The default mode of docker run in attached and docker start is detached
+* With attached mode we can see the console logs right away 
+* We can change the default mode of docker run command also 
+   
 
 
