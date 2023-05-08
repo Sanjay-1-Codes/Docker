@@ -1,4 +1,20 @@
-docker build . - creates docker image and provides id of the image
-docker run -p <port>:<port> <imageId> - runs the container based on image
-docker ps - lists the name of all running containers
-docker stop <containerName> - stop the container
+Section 1
+---------
+
+docker build .                                            - creates docker image and provides id of the image
+docker run -p <localhost-port>:<container-port> <imageId> - creates a new container and runs the container based on image
+docker ps                                                 - lists all running containers
+docker ps -a                                              - lists all running/exited containers
+docker stop <containerName>                               - stop the container
+--help                                                    - can be added to any docker command to list the available options
+
+Section 2
+---------
+
+docker run node                   - to directly run an image with name from dockerhub - this downloads the image automatically and runs 
+                                    as a container - this exits after starting since the container runs in isolation and there is no 
+                                    interactive session exposed to the user
+docker run -it node               - now this starts the another container and provides a node shell where we can execute js code                  
+docker pull node                  - to download a file from the remote repository
+docker start <containerName>      - to restart a stopped container
+

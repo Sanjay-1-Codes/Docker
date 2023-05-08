@@ -1,0 +1,35 @@
+Images 
+------
+
+* The images are similar to Class in java 
+* Its a template that contains the written code and all its dependencies bundled together for running 
+  the code
+* We can run prebuilt images from a public repo called - dockerhub
+* Image is read only
+* Images are layer based i.e when we rebuild an image, docker sees if there's any change associated 
+  to each and every command (like FROM/WORKDIR) in an orderly way and executes all command from the 
+  point where there is a change, if there are no changes it uses everything from the cache to rebuild 
+  the image
+* This is called Layer based architecture, each and every command in DockerFile represents a layer  
+
+
+Container
+---------
+
+* The containers are similar to Objects in java
+* With single image we can build multiple instances of the containers up and running
+* Multiple containers doesnt mean that our image is copied multiple times and run 
+* When multiple containers are run based on a same image, then all of them uses the same image file 
+  as refrence(not copied) and allocates space and memory separately thus making the process more efficient
+* Container simply adds an additional layer on top of the image, that's the CMD layer used to run the applciation  
+
+docker run vs docker start 
+--------------------------
+
+* With docker run, once we execute the command the terminal freezes and we are not allowed to enter any more commands
+  until the running instance of the container is stopped
+* With docker start, once we execute the command the terminal is not freezed it allows us to run other commands, but also 
+  the container is restarted and running
+* What's the difference bw these two?    
+
+
