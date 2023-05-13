@@ -10,7 +10,11 @@ Images
   to each and every command (like FROM/WORKDIR) in an orderly way and executes all command from the 
   point where there is a change, if there are no changes it uses everything from the cache to rebuild 
   the image
-* This is called Layer based architecture, each and every command in DockerFile represents a layer  
+* This is called Layer based architecture, each and every command in DockerFile represents a layer 
+* Naming an image is called as tag 
+* Tag consists of two parts name:tag
+* The name is usually the repo name of the image
+* The tag is usually the version of the image 
 
 
 Container
@@ -35,6 +39,6 @@ docker run vs docker start
 * The default mode of docker run in attached and docker start is detached
 * With attached mode we can see the console logs right away 
 * We can change the default mode of docker run command also 
-   
+
 
 

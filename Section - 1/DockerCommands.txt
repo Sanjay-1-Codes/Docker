@@ -27,4 +27,14 @@ With docker run we are only attached to the output of the container, we cant inp
 mode with the terminal provided by the container for that we run images with -i (interactive) -t (pseudo TTY)
 
 docker run -it <containerName>                               - now this starts the another container and provides a shell where we can input
+docker rm <containerName> <containerName> ...                - to remove a stopped container
+docker images                                                - lists the images
+docker rmi <imageId>                                         - to delete image not used by container
+docker image prune                                           - to remove all unused images at once
+docker container prune                                       - to remove all stopped containers at once
+docker run -p <host-port>:<container-port> --rm <imageId>    - to remove the container automatically when it exits
+docker image inspect <imageId>                               - to inspect the image
+docker cp <source-path> <container-name:dest-path>           - to copy files from and to a running container
+docker run -p <port>:<port> --name <cont-name> <imageId>     - to name a container while running
+docker build -t <name>:<tag> .                               - to build an image with tag
 
