@@ -37,4 +37,7 @@ docker image inspect <imageId>                               - to inspect the im
 docker cp <source-path> <container-name:dest-path>           - to copy files from and to a running container
 docker run -p <port>:<port> --name <cont-name> <imageId>     - to name a container while running
 docker build -t <name>:<tag> .                               - to build an image with tag
+docker push <repositoryName>:<tag>                           - to push an image to the docker hub after creating the repository (keep the image tag and repository name the same for pushing the image)
+docker tag <oldImageTag> <newImageTag>                       - to retag the name of a created image
+docker login                                                 - to login to docker hub locally before pushing the images
 
