@@ -1,0 +1,4 @@
+* There are three types of data in the container
+* The first one is the code we wrote and the runtime environment we bundled with it - image layer - read only - permanent
+* The second one is the data that is introduced while running the program (Arraylist in memory) - container layer - read + write - temporary app data
+* The third one is the data required permanently for the app (database data) - volumes - read + write - permanent app data
